@@ -6,9 +6,8 @@ import androidx.activity.compose.setContent
 import androidx.core.view.WindowCompat
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.example.nativefeatures.ui.theme.NativeFeaturesTheme
 
@@ -33,9 +32,12 @@ class MainActivity : ComponentActivity() {
 //                        horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.Top // <- Show content from top
                     ) {
-                        GreetingFunc("Kotlin")
-                        GreetingFunc("Jetpack Compose...")
-                        GreetingFunc("Native Android")
+                        RecompositionFunc("Kotlin jetpack Compose !")
+                        RecompositionFunc("Learning Jetpack Compose Kotlin !")
+
+                        ProductListCard("Imdadul Haque", 28, Color.LightGray, modifier = Modifier.padding(vertical = 16.dp)) // Here How can I set the margin vertically ?
+
+                        CounterScreen()
                     }
                 }
             }
